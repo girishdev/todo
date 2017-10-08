@@ -5,14 +5,13 @@
 		include_once('classes/class.ManageUsers.php');
 		$users = new ManageUsers();
 		
-		echo $username = $_POST['username'];
-		echo $password = $_POST['password'];
-		echo $email = $_POST['email'];
-		echo $repassword = $_POST['repassword'];
-		echo $ip_address = $_SERVER['REMOTE_ADDR'];
-		echo $date = date("Y-m-d");
-		echo $time = date("H:i:s");
-		// exit();
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+		$email = $_POST['email'];
+		$repassword = $_POST['repassword'];
+		$ip_address = $_SERVER['REMOTE_ADDR'];
+		$date = date("Y-m-d");
+		$time = date("H:i:s");
 		
 		if(empty($username) || empty($email) || empty($password) || empty($repassword)){
 			$error = 'All fields are required';
@@ -24,9 +23,7 @@
 			$check_availablity = $users->GetUserInfo($username);
 			if($check_availablity == 0){
 				$password = md5($password);
-				// exit();
-				echo $register_user = $users->registerUsers($username, $email, $password, $ip_address, $date, $time);
-				echo '<br />';
+				$register_user = $users->registerUsers($username, $email, $password, $ip_address, $date, $time);
 				if($register_user == 1){
 					echo $make_sessions = $users->GetUserInfo($username);
 					// echo 'Test';
@@ -52,13 +49,12 @@
 	if(isset($_POST['login'])){
 		session_start();
 		include_once('classes/class.ManageUsers.php');
-		echo $username = $_POST['login_username'];
-		echo $password = $_POST['login_password'];
-		// exit();
+		$username = $_POST['login_username'];
+		$password = $_POST['login_password'];
 		if(empty($username) || empty($password)) {
 			$error = 'All fields are required.';
 		} else {
-			$password = md5($password);
+			// $password = md5($password);
 			$login_users = new ManageUsers();
 			$auth_user = $login_users->LoginUsers($username, $password);
 			if($auth_user == 1){

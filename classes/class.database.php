@@ -5,7 +5,7 @@
 		public $db_name = 'todo';
 		public $db_user = 'root';
 		public $db_pass = 'root';
-		public $db_host = 'localhost';
+		public $db_host = '127.0.0.1';
 		
 		function connect(){
 			try {

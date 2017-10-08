@@ -16,7 +16,7 @@
 			$query->execute($values);
 			$counts = $query->rowCount();
 			return $counts;
-		} 
+		}
 		
 		function ListTodo($username, $status=null) {
 			if(isset($status)){
@@ -41,8 +41,7 @@
 		}
 		
 		function EditTodo($username, $id, $title, $description, $progress, $due_date, $label){
-			$query = $this->link->query("UPDATE todo SET title = '$title', description = '$description', progress = '$progress', due_date = '$due_date', label = '$label'
-			WHERE username='$username' AND id='$id'");
+			$query = $this->link->query("UPDATE todo SET title = '$title', description = '$description', progress = '$progress', due_date = '$due_date', label = '$label' WHERE username='$username' AND id='$id'");
 			$counts = $query->rowCount();
 			return $counts;
 			/*($x = 0;

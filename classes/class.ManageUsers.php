@@ -12,13 +12,6 @@
 		}
 		
 		function registerUsers($username, $email, $password, $ip_address, $date, $time) {
-			echo $username;
-			echo $email; 
-			echo $password;
-			echo $ip_address; 
-			echo $date;
-			echo $time;
-			exit();
 			$query = $this->link->prepare("INSERT INTO  users (username, email, password, ip_address, date, time) VALUES (?,?,?,?,?,?)");
 			$values = array($username, $email, $password, $ip_address, $date, $time);
 			$query->execute($values);
@@ -45,6 +38,5 @@
 			
 		}
 	}
-	
-// echo $users->registerUsers('Girish','123456','127.0.0.1','12:00','29-02-2012');
+
 ?>

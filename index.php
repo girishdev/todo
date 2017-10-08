@@ -11,7 +11,7 @@
 						<a href="add_new.php" class="btn btn-success"> + Add new </a>
 					</div>
 				</div>
-				<div id="mainBody">				
+				<div id="mainBody">
 					<?php
 						if(isset($error)){
 							echo '<div class="alert alert-error">'.$error.'</div>';

@@ -51,7 +51,7 @@
 							</div>
 							<div class="form_elements">
 								<input type="submit" name="login" id="login" value="Login" class="btn btn-success" />
-							</div>							
+							</div>
 						</form>
 						<!--<span id="show_register">Don't have an account ?</span>-->
 						<a href="#" id="show_register">Don't have an account ?</a>
