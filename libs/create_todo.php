@@ -27,7 +27,8 @@
 				$error = 'There was an error.'.$mysql_error();
 			}
 		}
-		
 	}
-	
+
+//@media (min-width: 500px) and (max-width: 1200px) {
+
 ?>

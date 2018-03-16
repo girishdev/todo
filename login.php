@@ -16,7 +16,6 @@
 	<script type="text/javascript" language="javascript" src="js/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" language="javascript" src="js/todo.js"></script>
 	<script type="text/javascript">
-
 	</script>
 </head>
 

@@ -22,7 +22,7 @@
 		} else {
 			$check_availablity = $users->GetUserInfo($username);
 			if($check_availablity == 0){
-				$password = md5($password);
+				$password = $password;
 				$register_user = $users->registerUsers($username, $email, $password, $ip_address, $date, $time);
 				if($register_user == 1){
 					echo $make_sessions = $users->GetUserInfo($username);

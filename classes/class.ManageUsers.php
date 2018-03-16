@@ -1,7 +1,8 @@
 <?php
 
+	ini_set('display_errors', 1);
 	include_once('class.database.php');
-	
+
 	class ManageUsers {
 		public $link;
 		
@@ -13,9 +14,8 @@
 		
 		function registerUsers($username, $email, $password, $ip_address, $date, $time) {
 			$query = $this->link->prepare("INSERT INTO  users (username, email, password, ip_address, date, time) VALUES (?,?,?,?,?,?)");
-			$values = array($username, $email, $password, $ip_address, $date, $time);
-			$query->execute($values);
-			$counts = $query->rowCount();
+			$query->execute(array($username, $email, $password, $ip_address, $date, $time));
+			$counts = $query->rowCount();exit();
 			return $counts;
 		}
 		
