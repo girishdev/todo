@@ -29,6 +29,7 @@
 			$query = $this->link->query("SELECT * FROM users WHERE username = '$username'");
 			$rowcount = $query->rowCount();
 			if($rowcount == 1) {
+				// $result = $query->fetch(PDO::FETCH_OBJ); // get result in Object
 				$result = $query->fetchAll();
 				return $result;
 			} else {
