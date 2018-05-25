@@ -8,7 +8,4 @@ echo fread($myfile,filesize("test.txt"));
 
 fclose($myfile);
 
-
-
-
 ?>
